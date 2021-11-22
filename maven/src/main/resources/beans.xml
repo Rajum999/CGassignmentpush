@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean id="HelloBean" class="codebind.HelloBean">
+   </bean>
+   
+   <bean id ="triangle" class = "codebind.Triangle" >
+	<property name="point1" ref="point1"/>
+	<property name="point2" ref="point2"/>
+	<property name="point3" ref="point3"/>
+  	</bean>
+ 
+  	
+  	<bean id="point1" class="codebind.Point">
+  	<property name="X" value="0"/>
+  	<property name="y" value="0"/>
+  	</bean>
+  	
+  	<bean id="point2" class="codebind.Point">
+  	<property name="X" value="3"/>
+  	<property name="y" value="3"/>
+  	</bean>
+   
+   <bean id="point3" class="codebind.Point">
+  	<property name="X" value="6"/>
+  	<property name="y" value="9"/>
+  	</bean>
+   <bean id ="circle" class = "codebind.Circle" >
+<!-- 	<property name="center" ref="point2"/> -->
+  	</bean>
+  	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"></bean>
+  	</beans>

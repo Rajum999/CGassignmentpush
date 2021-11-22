@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="customer" class="springassignment.Customer">
+    <property name="customerId" value="1232"/>
+    <property name="customerName" value="Naruto"/>
+    <property name="customerContact" value="1234567890"/>
+    <property name="customerAddress" ref="addr"/>
+    </bean>
+    
+    <bean id="addr" class="springassignment.Address">
+    <property name="street" value="kphb"/>
+    <property name="city" value="LeafVillage"/>
+    <property name="state" value="tvtokyo"/>
+    <property name="zip" value="522261"/>
+    <property name="country" value="Japan"/>
+    </bean>
+</beans>
